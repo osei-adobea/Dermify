@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "380467613085",
+    "project_id": "dermify-eae89",
+    "storage_bucket": "dermify-eae89.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380467613085:android:38ad379990542b2aa33374",
+        "android_client_info": {
+          "package_name": "com.dermify.dermify"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAak3QuSuDmVkV8ZAhyYTYlstYQWgqYWvM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
