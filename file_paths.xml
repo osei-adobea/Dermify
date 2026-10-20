@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Goes in app/src/main/res/xml/file_paths.xml
+
+  Deliberately broad: covers every app-private location a captured photo
+  might be saved to, so FileProvider can share it regardless of which
+  directory the camera code chose. All of these are still app-private
+  scopes - nothing here exposes the wider filesystem.
+
+  If sharing fails with "Failed to find configured root that contains ...",
+  the log will name the exact path; add a matching entry here.
+-->
+<paths>
+    <files-path          name="internal_files"  path="." />
+    <cache-path          name="internal_cache"  path="." />
+    <external-files-path name="external_files"  path="." />
+    <external-cache-path name="external_cache"  path="." />
+</paths>

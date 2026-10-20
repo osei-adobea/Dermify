@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Dermify</string>
+    <string name="consent_accept">I Consent - Save for Training</string>
+</resources>

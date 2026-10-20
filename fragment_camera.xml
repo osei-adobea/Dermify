@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Top scrim for control legibility -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:background="#73000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom scrim for control legibility -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:background="#8C000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Framing guide -->
+    <View
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:background="@drawable/bg_framing_guide"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.42" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Center the affected area"
+        android:textColor="#CCFFFFFF"
+        android:textSize="12sp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/faceScanPill"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible" />
+
+    <!-- Face scan toggle in a readable pill -->
+    <LinearLayout
+        android:id="@+id/faceScanPill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_camera_pill"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@android:drawable/ic_menu_camera"
+            app:tint="#FFFFFF"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Face scan" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Face scan"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:layout_marginEnd="6dp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchFaceScan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <!-- Gallery icon button -->
+    <ImageView
+        android:id="@+id/btnGallery"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_camera_icon_btn"
+        android:src="@android:drawable/ic_menu_gallery"
+        app:tint="#FFFFFF"
+        android:padding="14dp"
+        android:contentDescription="Open gallery"
+        app:layout_constraintBottom_toBottomOf="@id/btnCapture"
+        app:layout_constraintTop_toTopOf="@id/btnCapture"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnCapture" />
+
+    <!-- Shutter button -->
+    <ImageView
+        android:id="@+id/btnCapture"
+        android:layout_width="76dp"
+        android:layout_height="76dp"
+        android:background="@drawable/bg_shutter_button"
+        android:contentDescription="Capture photo"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
