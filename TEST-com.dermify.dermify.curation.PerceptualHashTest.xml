@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.dermify.dermify.curation.PerceptualHashTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-08-10T17:45:05.848Z" hostname="CARDI-B" time="0.197">
+  <properties/>
+  <testcase name="hamming distance handles identical and fully inverted hashes" classname="com.dermify.dermify.curation.PerceptualHashTest" time="0.033"/>
+  <testcase name="DC term dominates, and a featureless image hashes unstably" classname="com.dermify.dermify.curation.PerceptualHashTest" time="0.04"/>
+  <testcase name="hash is sixteen lowercase hex characters" classname="com.dermify.dermify.curation.PerceptualHashTest" time="0.008"/>
+  <testcase name="recompression-style noise stays within the duplicate threshold" classname="com.dermify.dermify.curation.PerceptualHashTest" time="0.04"/>
+  <testcase name="malformed hashes report minus one rather than a plausible distance" classname="com.dermify.dermify.curation.PerceptualHashTest" time="0.001"/>
+  <testcase name="unrelated images sit well outside the duplicate threshold" classname="com.dermify.dermify.curation.PerceptualHashTest" time="0.015"/>
+  <testcase name="same content at a different resolution stays within the duplicate threshold" classname="com.dermify.dermify.curation.PerceptualHashTest" time="0.058"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
